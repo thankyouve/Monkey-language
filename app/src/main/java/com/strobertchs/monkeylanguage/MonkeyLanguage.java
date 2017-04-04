@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MonkeyLanguage extends AppCompatActivity {
+public class MonkeyLanguage extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
