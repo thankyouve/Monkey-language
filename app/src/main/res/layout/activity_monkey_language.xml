@@ -10,28 +10,50 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.strobertchs.monkeylanguage.MonkeyLanguage">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/mtxtMonkeyWords"
-        android:text="Enter Monkey Words Here!"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:text="Results"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="94dp"
-        android:id="@+id/similations"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/mtxtMonkeyWords"
+                android:text="Enter Monkey Words Here!"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:text="CHECK NOW!"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_above="@+id/results"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="49dp"
+                android:id="@+id/beginChecking"
+                android:onClick="getWords" />
+
+            <TextView
+                android:text="Results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="94dp"
+                android:id="@+id/results"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
