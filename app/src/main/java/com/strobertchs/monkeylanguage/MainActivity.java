@@ -10,8 +10,6 @@ import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    String[] monkeyWords;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
