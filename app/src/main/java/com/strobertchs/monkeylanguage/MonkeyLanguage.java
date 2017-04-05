@@ -45,8 +45,8 @@ public class MonkeyLanguage extends AppCompatActivity{
 
                 if (firstCharacter.equals("A")) {
                     if (lastCharacter.equals("A")) {
-                        for (int m = 0; m < (double)monkeyWordsList[i].length() - 0.5; m += 2) {
-                            String twoCharacter = monkeyWordsList[i].substring(m, m + 1);
+                        for (int m = 0; m < monkeyWordsList[i].length() - 1; m += 2) {
+                            String twoCharacter = monkeyWordsList[i].substring(m, m + 2);
 
                             if (twoCharacter.equals("AN")) {
                                 if (m == monkeyWordsList[i].length() - 3) {
@@ -66,7 +66,7 @@ public class MonkeyLanguage extends AppCompatActivity{
                     if (lastCharacter.equals("S")) {
                         if (secondLastChar.equals("A")){
                             for (int m = 1; m < monkeyWordsList[i].length() - 2; m += 2) {
-                                String twoCharacter = monkeyWordsList[i].substring(m, m + 1);
+                                String twoCharacter = monkeyWordsList[i].substring(m, m + 2);
 
                                 if (twoCharacter.equals("AN")) {
                                     if (m == monkeyWordsList[i].length() - 4) {
