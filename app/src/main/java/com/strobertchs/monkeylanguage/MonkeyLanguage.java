@@ -30,15 +30,25 @@ public class MonkeyLanguage extends AppCompatActivity{
 
     private ArrayList<String> checkMonkeyResult(String monkeyWordsList[]){
         ArrayList<String> results = new ArrayList<>();
+        boolean haveX = false;
+
 
         for (int i = 0; i < monkeyWordsList.length; i++) {
-            if (monkeyWordsList[i].length() == 3 && monkeyWordsList[i].equals("BAS")) {
+            if(monkeyWordsList[i].equals("X")){
+                haveX = true;
+                return results;
+            }
+
+            if (monkeyWordsList[i].length() == 3 && monkeyWordsList[i].equals("BAS") && haveX == false) {
                 results.add("YES");
             }
-            else if (monkeyWordsList[i].length() == 1 && monkeyWordsList[i].equals("A")) {
+            else if (monkeyWordsList[i].length() == 1 && monkeyWordsList[i].equals("A") && haveX == false) {
                 results.add("YES");
             }
-            else if (monkeyWordsList[i].length() % 2 == 1 && monkeyWordsList[i].length() != 1) {
+            else if(monkeyWordsList[i].length() == 1 && !monkeyWordsList[i].equals("A") && haveX == false){
+                results.add("NO");
+            }
+            else if (monkeyWordsList[i].length() % 2 == 1 && monkeyWordsList[i].length() != 1 && haveX == false) {
                 String firstCharacter = Character.toString(monkeyWordsList[i].charAt(0));
                 String lastCharacter = Character.toString(monkeyWordsList[i].charAt(monkeyWordsList[i].length() - 1));
                 String secondLastChar = Character.toString(monkeyWordsList[i].charAt(monkeyWordsList[i].length() - 2));
@@ -90,7 +100,7 @@ public class MonkeyLanguage extends AppCompatActivity{
                     results.add("NO");
                 }
             }
-            else {
+            else{
                 results.add("NO");
             }
         }
@@ -98,7 +108,7 @@ public class MonkeyLanguage extends AppCompatActivity{
         return results;
     }
 
-    public String checkMonkeyResultStr(ArrayList<String> resultsList){
+    private String checkMonkeyResultStr(ArrayList<String> resultsList){
         String result = "";
 
         for (String sentence: resultsList){

@@ -32,4 +32,15 @@
         android:layout_centerHorizontal="true"
         android:layout_alignWithParentIfMissing="false"
         android:textAlignment="center" />
+
+    <Button
+        android:text="How to Speak MonkeyLanguage?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:id="@+id/direction"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/buttonStart"
+        android:layout_centerHorizontal="true"
+        android:onClick="directions" />
 </RelativeLayout>

@@ -17,6 +17,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         final Button buttonStart = (Button)findViewById(R.id.buttonStart);
         buttonStart.setOnClickListener(this);
+        final Button direction = (Button)findViewById(R.id.direction);
+        direction.setOnClickListener(this);
+    }
+
+    public void directions(View view) {
+        Intent m;
+        m = new Intent(this, Direction.class);
+        startActivity(m);
     }
 
     @Override
